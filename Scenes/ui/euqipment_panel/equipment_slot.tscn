@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://r7tldcxriug3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8b2lm"]
+bg_color = Color(0.21960784, 0.23137255, 0.2901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.34407574, 0.3440758, 0.34407547, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxx2r"]
+bg_color = Color(0.1948461, 0.20561379, 0.25950477, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.34407574, 0.3440758, 0.34407547, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pm7kv"]
+bg_color = Color(0.2779073, 0.29190084, 0.36165422, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.34407574, 0.3440758, 0.34407547, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="EquipmentSlot" type="Button" unique_id=1070396674]
+custom_minimum_size = Vector2(40, 40)
+theme_override_styles/normal = SubResource("StyleBoxFlat_8b2lm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jxx2r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pm7kv")
