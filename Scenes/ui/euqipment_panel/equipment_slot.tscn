@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://r7tldcxriug3"]
 
+[ext_resource type="Script" uid="uid://d4gky0wjkrbh0" path="res://Scenes/ui/euqipment_panel/equipment_slot.gd" id="1_3quvs"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8b2lm"]
 bg_color = Color(0.21960784, 0.23137255, 0.2901961, 1)
 border_width_left = 2
@@ -41,3 +43,4 @@ custom_minimum_size = Vector2(40, 40)
 theme_override_styles/normal = SubResource("StyleBoxFlat_8b2lm")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jxx2r")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pm7kv")
+script = ExtResource("1_3quvs")

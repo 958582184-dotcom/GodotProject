@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://266ptxi3y2s4"]
 
 [ext_resource type="Texture2D" uid="uid://bcuswpmg4cbuv" path="res://Sprites/Backgrounds/Tilesets/TilesetFloor.png" id="1_0tfn5"]
-[ext_resource type="Script" uid="uid://bhi6k3t8lsssr" path="res://Scenes/Town/town.gd" id="1_i1elt"]
 [ext_resource type="Texture2D" uid="uid://ml1c8vmlq262" path="res://Sprites/Backgrounds/Tilesets/Interior/TilesetInteriorFloor.png" id="2_rcf5j"]
 [ext_resource type="Texture2D" uid="uid://b2tcd5s4u05ny" path="res://Sprites/Backgrounds/Tilesets/TilesetWater.png" id="3_c7fvm"]
 [ext_resource type="Texture2D" uid="uid://dxiso66tj6ccv" path="res://Sprites/Backgrounds/Tilesets/TilesetElement.png" id="3_pyysl"]
@@ -3592,59 +3591,6 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_tgwj8")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifow5"]
-bg_color = Color(0.25882354, 0.05882353, 0.011764706, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_abi3o"]
-bg_color = Color(0.77254903, 0.2509804, 0.105882354, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.25882354, 0.05882353, 0.011764706, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dih74"]
-bg_color = Color(0.015686275, 0.12941177, 0.2, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i1elt"]
-bg_color = Color(0.14509805, 0.48235294, 0.68235296, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.015686275, 0.12941177, 0.2, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ak0q7"]
-bg_color = Color(0.015686275, 0.15686275, 0.07058824, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xr48g"]
-bg_color = Color(0.11372549, 0.5372549, 0.3019608, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.015686275, 0.15686275, 0.07058824, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7fvm"]
 bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
 border_width_left = 2
@@ -3703,8 +3649,6 @@ shadow_size = 2
 shadow_offset = Vector2(4, 4)
 
 [node name="Town" type="Node2D" unique_id=2058431392]
-script = ExtResource("1_i1elt")
-player_scene = ExtResource("4_bac08")
 
 [node name="Terrain" type="Node2D" parent="." unique_id=1640431035]
 
@@ -3723,77 +3667,10 @@ tile_set = SubResource("TileSet_abi3o")
 format = 2
 layer_0/tile_data = PackedInt32Array(-458764, 0, 0, -393228, 0, 1, -327692, 0, 2, -458763, 65536, 0, -393227, 65536, 1, -458762, 131072, 0, -393226, 131072, 1, -327690, 131072, 2, -458761, 196608, 0, -393225, 196608, 1, -327689, 196608, 2, 65530, 524288, 0, 131066, 524288, 1, 196602, 524288, 2, 65531, 589824, 0, 131067, 589824, 1, 196603, 524288, 3, 65532, 655360, 0, 131068, 655360, 1, 196604, 655360, 2, 65533, 720896, 0, 131069, 720896, 1, 196605, 720896, 2, 7, 1245184, 0, 65543, 1245184, 1, 131079, 1245184, 2, 8, 1310720, 0, 65544, 1310720, 1, 131080, 1310720, 2, 9, 1376256, 0, 65545, 1376256, 1, 131081, 65536, 3, 10, 1441792, 0, 65546, 1441792, 1, 131082, 1441792, 2, -524289, 1900544, 1, -458753, 1900544, 2, -393217, 1900544, 3, -589824, 1966080, 1, -524288, 1966080, 2, -458752, 65536, 3, -655359, 2031616, 0, -589823, 2031616, 1, -524287, 2031616, 2, -458751, 2031616, 3, -655358, 2097152, 0, -589822, 2097152, 1, -524286, 2097152, 2, -458750, 2097152, 3, 2, 262144, 0, 65538, 262144, 1, 131074, 262144, 2, 3, 327680, 0, 65539, 327680, 1, 131075, 524288, 3, 4, 393216, 0, 65540, 393216, 1, 131076, 393216, 2, 5, 458752, 0, 65541, 458752, 1, 131077, 458752, 2, -458759, 786432, 0, -393223, 786432, 1, -327687, 786432, 2, -458758, 851968, 0, -393222, 851968, 1, -327686, 65536, 3, -458757, 917504, 0, -393221, 917504, 1, -327685, 917504, 2, -458756, 983040, 0, -393220, 983040, 1, -327684, 1900544, 11, 65524, 1245184, 0, 131060, 1245184, 1, 196596, 1245184, 2, 65525, 1310720, 0, 131061, 1310720, 1, 196597, 1310720, 2, 65526, 1376256, 0, 131062, 1376256, 1, 196598, 131072, 3, 65527, 1441792, 0, 131063, 1441792, 1, 196599, 1441792, 2, -262148, 1900544, 12, -327683, 1966080, 11, -262147, 1966080, 12, 131065, 458752, 15, 196601, 458752, 16, -327691, 65536, 2, -1900541, 720896, 4, -1835005, 720896, 4, -1769469, 720896, 4, -1703933, 720896, 4, -1638397, 720896, 4, -1572861, 720896, 4, -1507325, 720896, 4, -1441789, 720896, 4, -1376253, 720896, 4, -1310717, 524288, 5, -1900531, 720896, 4, -1834995, 720896, 4, -1769459, 720896, 4, -1703923, 720896, 4, -1638387, 720896, 4, -1572851, 720896, 4, -1507315, 720896, 4, -1441779, 720896, 4, -1376243, 720896, 4, -1310707, 589824, 5, -1310716, 720896, 5, -1310715, 720896, 5, -1310709, 720896, 5, -1310708, 720896, 5, -1966077, 720896, 4, -1966067, 720896, 4, -1966073, 196608, 9, -1966072, 262144, 9, -1966071, 327680, 9, -2031609, 196608, 8, -2031608, 262144, 8, -2031607, 327680, 8, -1966081, 1245184, 19, -1900545, 1245184, 20, -1835009, 1245184, 21, -2031616, 1310720, 19, -1966080, 1310720, 20, -1900544, 1310720, 21, -2031615, 1376256, 19, -1966079, 1376256, 20, -1900543, 1376256, 21, -1966086, 0, 7, -1900550, 0, 8, -1835014, 0, 9, -1966085, 65536, 7, -1900549, 65536, 8, -1835013, 65536, 9, -1966084, 131072, 7, -1900548, 131072, 8, -1835012, 131072, 9, -2031627, 1900544, 4, -1966091, 1900544, 5, -1900555, 1900544, 6, -1835019, 1900544, 7, -2031626, 1966080, 4, -1966090, 1966080, 5, -1900554, 1966080, 6, -1835018, 1966080, 7, -2031625, 2031616, 4, -1966089, 2031616, 5, -1900553, 2031616, 6, -1835017, 2031616, 7, -1703948, 2097152, 17, -1638412, 2097152, 18, -1507340, 2031616, 18, -1507339, 2031616, 18, -1441790, 2097152, 17, -1376254, 2097152, 18, -851980, 2031616, 16, -851979, 2097152, 16, -851978, 2031616, 16, -851977, 2097152, 16, -1835007, 1900544, 8, -1769471, 1900544, 9, -1835006, 1966080, 8, -1769470, 1966080, 9, -1048536, 0, 7, -983000, 0, 8, -917464, 0, 9, -1048535, 65536, 7, -982999, 65536, 8, -917463, 65536, 9, -1048534, 131072, 7, -982998, 131072, 8, -917462, 131072, 9, -1769450, 196608, 8, -1703914, 196608, 9, -1769449, 262144, 8, -1703913, 262144, 9, -1769448, 327680, 8, -1703912, 327680, 9, -1966101, 65536, 15, -1900565, 65536, 16, -1835029, 65536, 17, -1966100, 131072, 15, -1900564, 131072, 16, -1835028, 131072, 17, -1966096, 327680, 17, -1900560, 327680, 18, -1966095, 393216, 17, -1900559, 393216, 18, -1966105, 327680, 17, -1900569, 327680, 18, -1966104, 393216, 17, -1900568, 393216, 18, -1638414, 458752, 15, -1572878, 458752, 16, -1638426, 458752, 15, -1572890, 458752, 16, -851984, 131072, 18, -851987, 131072, 18, -851990, 131072, 18, -851993, 131072, 18, -917518, 524288, 15, -851982, 524288, 16, 589822, 655360, 15, 655358, 655360, 16, 589823, 720896, 15, 655359, 720896, 16, 524288, 720896, 15, 589824, 720896, 16, 524289, 786432, 15, 589825, 786432, 16, 720894, 655360, 17, 720895, 720896, 17, 655360, 720896, 17, 655361, 786432, 17)
 
+[node name="Player" parent="." unique_id=1081890233 instance=ExtResource("4_bac08")]
+
 [node name="HUD" type="CanvasLayer" parent="." unique_id=476847872]
 script = ExtResource("9_57ura")
-
-[node name="HealthBar" type="ProgressBar" parent="HUD" unique_id=958492306]
-custom_minimum_size = Vector2(150, 27)
-offset_left = 15.0
-offset_top = 5.0
-offset_right = 165.0
-offset_bottom = 32.0
-theme_override_styles/background = SubResource("StyleBoxFlat_ifow5")
-theme_override_styles/fill = SubResource("StyleBoxFlat_abi3o")
-max_value = 1.0
-step = 0.001
-value = 0.5
-show_percentage = false
-
-[node name="HealthLabel" type="Label" parent="HUD/HealthBar" unique_id=1056184145]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -1.0
-offset_bottom = -1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "20/20"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ManaBar" type="ProgressBar" parent="HUD" unique_id=322015279]
-custom_minimum_size = Vector2(150, 27)
-offset_left = 15.0
-offset_top = 35.0
-offset_right = 165.0
-offset_bottom = 62.0
-theme_override_styles/background = SubResource("StyleBoxFlat_dih74")
-theme_override_styles/fill = SubResource("StyleBoxFlat_i1elt")
-max_value = 1.0
-step = 0.001
-value = 0.5
-show_percentage = false
-
-[node name="ManaLabel" type="Label" parent="HUD/ManaBar" unique_id=461786095]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -1.0
-offset_bottom = -1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "100/100"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ExpBar" type="ProgressBar" parent="HUD" unique_id=1058926273]
-custom_minimum_size = Vector2(700, 27)
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -350.0
-offset_top = 20.0
-offset_right = 350.0
-offset_bottom = 47.0
-grow_horizontal = 2
-theme_override_styles/background = SubResource("StyleBoxFlat_ak0q7")
-theme_override_styles/fill = SubResource("StyleBoxFlat_xr48g")
-max_value = 1.0
-step = 0.001
 
 [node name="MainButtons" type="Panel" parent="HUD" unique_id=1339894245]
 custom_minimum_size = Vector2(234, 66)
@@ -3996,23 +3873,19 @@ theme_override_constants/separation = 12
 alignment = 1
 
 [node name="EquipmentPanel" parent="HUD/Panels" unique_id=245898354 instance=ExtResource("14_jxx2r")]
-unique_name_in_owner = true
 visible = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_wvhbo")
 
 [node name="InventoryPanel" parent="HUD/Panels" unique_id=127471415 instance=ExtResource("14_8b2lm")]
-unique_name_in_owner = true
 visible = false
 layout_mode = 2
 
 [node name="StatsPanel" parent="HUD/Panels" unique_id=1003755818 instance=ExtResource("16_kxr0q")]
-unique_name_in_owner = true
 visible = false
 layout_mode = 2
 
 [node name="SkillsPanel" parent="HUD/Panels" unique_id=2046245326 instance=ExtResource("17_kxr0q")]
-unique_name_in_owner = true
 layout_mode = 2
 
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/EquipmentButton" to="HUD" method="_on_equipment_button_pressed"]

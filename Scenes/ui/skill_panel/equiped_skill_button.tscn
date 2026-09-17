@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://ckxya0oqkh3xb"]
+
+[ext_resource type="Texture2D" uid="uid://bweydwh8hi2hw" path="res://Sprites/Ui/Skill Icon/Meteo/Rain.png" id="1_6wytc"]
+[ext_resource type="Script" uid="uid://bh8ftsnmf1mw2" path="res://Scenes/ui/skill_panel/equiped_skill_button.gd" id="1_w6eto"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wvhbo"]
+font_size = 12
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="EquipedSkillButton" type="Button" unique_id=1486793293]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 8.0
+offset_bottom = 8.0
+flat = true
+script = ExtResource("1_w6eto")
+
+[node name="Emptyl" type="Panel" parent="." unique_id=841344468]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SkillIcon" type="TextureRect" parent="." unique_id=1121179081]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6wytc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="." unique_id=143647404]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -17.0
+offset_top = -18.0
+offset_right = -2.0
+offset_bottom = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "1"
+label_settings = SubResource("LabelSettings_wvhbo")
+horizontal_alignment = 2

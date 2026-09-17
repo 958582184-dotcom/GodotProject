@@ -45,7 +45,7 @@ func _ready() -> void:
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
-		add_exp(300)
+		add_exp(20)
 	
 
 func is_moving()-> bool:
@@ -91,7 +91,7 @@ func add_exp(value:float)->void:
 	while curr_exp >= next_level_exp:
 		level_up()
 		
-		EventBus.on_player_new_level.emit(curr_exp,next_level_exp)
+	EventBus.on_player_new_level.emit(curr_exp,next_level_exp)
 
 func level_up()-> void:
 	curr_exp -= next_level_exp
@@ -102,6 +102,5 @@ func level_up()-> void:
 	
 func enable_weapon_collision(value : bool)->void:
 	enemy_area.monitoring = value
-	
-	
+
 	

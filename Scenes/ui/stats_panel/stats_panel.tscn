@@ -1,0 +1,254 @@
+[gd_scene format=3 uid="uid://bb38bdb2g2pan"]
+
+[ext_resource type="Script" uid="uid://dy4vrgxuuat3a" path="res://Scenes/ui/euqipment_panel/equipment_panel.gd" id="1_r3jke"]
+[ext_resource type="Texture2D" uid="uid://bltswclxeltyo" path="res://Sprites/Plus.png" id="2_7wbd3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvhbo"]
+bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.101960786, 0.11372549, 0.14901961, 1)
+shadow_size = 2
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wvhbo"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_pm7kv"]
+font_size = 14
+
+[sub_resource type="LabelSettings" id="LabelSettings_kxr0q"]
+font_size = 13
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pm7kv"]
+bg_color = Color(0.23529412, 0.78431374, 0.2901961, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dih74"]
+bg_color = Color(0.18896669, 0.60519874, 0.22631386, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i1elt"]
+bg_color = Color(0.2541482, 0.8859634, 0.32157233, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="StatsPanel" type="PanelContainer" unique_id=1003755818]
+custom_minimum_size = Vector2(215, 0)
+size_flags_horizontal = 10
+theme_override_styles/panel = SubResource("StyleBoxFlat_wvhbo")
+script = ExtResource("1_r3jke")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1144403018]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer" unique_id=182914132]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBox" unique_id=2076447220]
+layout_mode = 2
+text = "Stats"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBox" unique_id=819061850]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.22952712, 0.2509695, 0.30986595, 1)
+
+[node name="Space" type="Control" parent="MarginContainer/VBox" unique_id=567007845]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBox" unique_id=1850118017]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer" unique_id=2076863908]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="DamageLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer" unique_id=1975050990]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "攻击力: 100"
+label_settings = SubResource("LabelSettings_wvhbo")
+
+[node name="HPLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer" unique_id=230236280]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "生命: 100"
+label_settings = SubResource("LabelSettings_wvhbo")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer" unique_id=1584254732]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="VelLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer2" unique_id=554112928]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "速度: 80"
+label_settings = SubResource("LabelSettings_wvhbo")
+
+[node name="ManaLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer2" unique_id=683765050]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "魔法: 50"
+label_settings = SubResource("LabelSettings_wvhbo")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer" unique_id=965442061]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="CritLabel" type="Label" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer3" unique_id=1516105967]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "暴击率: 50"
+label_settings = SubResource("LabelSettings_wvhbo")
+
+[node name="CirtDMGLabel2" type="Label" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer3" unique_id=615899297]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "暴击伤害: 20"
+label_settings = SubResource("LabelSettings_wvhbo")
+
+[node name="ColorRect2" type="ColorRect" parent="MarginContainer/VBox" unique_id=406762503]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.22952712, 0.2509695, 0.30986595, 1)
+
+[node name="Space2" type="Control" parent="MarginContainer/VBox" unique_id=2068500598]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="CurrLevelLabel" type="Label" parent="MarginContainer/VBox" unique_id=1525461408]
+layout_mode = 2
+text = "等级 5"
+label_settings = SubResource("LabelSettings_pm7kv")
+horizontal_alignment = 1
+
+[node name="Space3" type="Control" parent="MarginContainer/VBox" unique_id=153859018]
+custom_minimum_size = Vector2(0, 6)
+layout_mode = 2
+
+[node name="CurrPointsLabel" type="Label" parent="MarginContainer/VBox" unique_id=1933194615]
+unique_name_in_owner = true
+layout_mode = 2
+text = "剩余点数 4"
+label_settings = SubResource("LabelSettings_kxr0q")
+
+[node name="Space4" type="Control" parent="MarginContainer/VBox" unique_id=931457822]
+custom_minimum_size = Vector2(0, 6)
+layout_mode = 2
+
+[node name="Attributes" type="VBoxContainer" parent="MarginContainer/VBox" unique_id=1965042542]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBox/Attributes" unique_id=1438909444]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer" unique_id=1085918463]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "力量"
+label_settings = SubResource("LabelSettings_wvhbo")
+
+[node name="StrPointsLabel" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer" unique_id=1666968625]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+text = "5"
+label_settings = SubResource("LabelSettings_wvhbo")
+horizontal_alignment = 1
+
+[node name="StrButton" type="Button" parent="MarginContainer/VBox/Attributes/HBoxContainer" unique_id=1971767983]
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_pm7kv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dih74")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i1elt")
+icon = ExtResource("2_7wbd3")
+icon_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBox/Attributes" unique_id=2038269282]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer2" unique_id=399071190]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "敏捷"
+label_settings = SubResource("LabelSettings_wvhbo")
+
+[node name="DexPointsLabel" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer2" unique_id=839623003]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+text = "4"
+label_settings = SubResource("LabelSettings_wvhbo")
+horizontal_alignment = 1
+
+[node name="DexButton" type="Button" parent="MarginContainer/VBox/Attributes/HBoxContainer2" unique_id=518547053]
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_pm7kv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dih74")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i1elt")
+icon = ExtResource("2_7wbd3")
+icon_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBox/Attributes" unique_id=1766325753]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer3" unique_id=1048099508]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "智力"
+label_settings = SubResource("LabelSettings_wvhbo")
+
+[node name="IntPointsLabel" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer3" unique_id=1878925254]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+text = "3"
+label_settings = SubResource("LabelSettings_wvhbo")
+horizontal_alignment = 1
+
+[node name="IntButton" type="Button" parent="MarginContainer/VBox/Attributes/HBoxContainer3" unique_id=51871680]
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_pm7kv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dih74")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i1elt")
+icon = ExtResource("2_7wbd3")
+icon_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBox/Attributes/HBoxContainer/StrButton" to="." method="_on_str_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBox/Attributes/HBoxContainer2/DexButton" to="." method="_on_dex_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBox/Attributes/HBoxContainer3/IntButton" to="." method="_on_int_button_pressed"]
