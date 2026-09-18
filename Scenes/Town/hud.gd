@@ -37,13 +37,13 @@ func _on_skill_button_pressed() -> void:
 	skills_panel.visible	= !skills_panel.visible
 	pass # Replace with function body.
 	
-func _on_player_health_updated(curr:float, max:float) -> void:
-	health_bar.value = curr/max
-	health_label.text = "%d/%d" % [curr, max]
+func _on_player_health_updated(_curr:float, _max:float) -> void:
+	health_bar.value = _curr/_max
+	health_label.text = "%d/%d" % [_curr, _max]
 	pass
-func _on_player_mana_updated(curr:float, max:float) -> void:
-	mana_bar.value = curr/max
-	mana_label.text = "%d/%d" % [curr, max]
+func _on_player_mana_updated(_curr:float, _max:float) -> void:
+	mana_bar.value = _curr/_max
+	mana_label.text = "%d/%d" % [_curr, _max]
 	pass
 	
 func _on_player_new_level(curr:float, new_level:float) -> void:
