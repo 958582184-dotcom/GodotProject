@@ -19,6 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://dwvlf8ud83s2p" path="res://Scenes/ui/euqipment_panel/equipment_panel.tscn" id="14_jxx2r"]
 [ext_resource type="PackedScene" uid="uid://bb38bdb2g2pan" path="res://Scenes/ui/stats_panel/stats_panel.tscn" id="16_kxr0q"]
 [ext_resource type="PackedScene" uid="uid://c2wbx2ud60aua" path="res://Scenes/ui/skill_panel/skills_panel.tscn" id="17_kxr0q"]
+[ext_resource type="PackedScene" uid="uid://cm740elc5h7uh" path="res://Scenes/ui/inventory_panel/inventory_slot.tscn" id="20_l6cw0"]
+[ext_resource type="PackedScene" uid="uid://wqseensadwsn" path="res://Scenes/drop_item/drop_item.tscn" id="20_xr48g"]
+[ext_resource type="Resource" uid="uid://ba43inyoj0ua4" path="res://data/potions/item_hp_10.tres" id="21_l6cw0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rcf5j"]
 texture = ExtResource("1_0tfn5")
@@ -4001,10 +4004,11 @@ visible = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_wvhbo")
 
-[node name="InventoryPanel" parent="HUD/Panels" unique_id=127471415 instance=ExtResource("14_8b2lm")]
+[node name="InventoryPanel" parent="HUD/Panels" unique_id=127471415 node_paths=PackedStringArray("grabbed_slot") instance=ExtResource("14_8b2lm")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+grabbed_slot = NodePath("../../GrabbedSlot")
 
 [node name="StatsPanel" parent="HUD/Panels" unique_id=1003755818 instance=ExtResource("16_kxr0q")]
 unique_name_in_owner = true
@@ -4013,7 +4017,22 @@ layout_mode = 2
 
 [node name="SkillsPanel" parent="HUD/Panels" unique_id=2046245326 instance=ExtResource("17_kxr0q")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
+
+[node name="GrabbedSlot" parent="HUD" unique_id=1589201689 instance=ExtResource("20_l6cw0")]
+visible = false
+offset_left = 1054.085
+offset_top = 422.49786
+offset_right = 1089.085
+offset_bottom = 457.49786
+mouse_filter = 2
+flat = true
+
+[node name="DropItem" parent="." unique_id=2005667203 instance=ExtResource("20_xr48g")]
+position = Vector2(52, -18)
+item = ExtResource("21_l6cw0")
+amount = 70
 
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/EquipmentButton" to="HUD" method="_on_equipment_button_pressed"]
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/InventoryButton" to="HUD" method="_on_inventory_button_pressed"]

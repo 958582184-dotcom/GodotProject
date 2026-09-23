@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 EventBus="*uid://bnxs3w8uuu8v7"
+Inventory="*uid://bwvwbjndopmd0"
 
 [debug]
 

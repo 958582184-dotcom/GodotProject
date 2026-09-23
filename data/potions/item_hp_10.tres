@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ba43inyoj0ua4"]
+
+[ext_resource type="Script" uid="uid://1c8baae1vnil" path="res://data/item_data.gd" id="1_34oh3"]
+[ext_resource type="Texture2D" uid="uid://brbowyharou0c" path="res://Sprites/Items/Potion/LifePot.png" id="1_wee1s"]
+
+[resource]
+script = ExtResource("1_34oh3")
+type = 2
+icon = ExtResource("1_wee1s")
+name = "小型生命药剂"
+description = "喝吧喝吧~"
+price = 5
+metadata/_custom_type_script = "uid://1c8baae1vnil"

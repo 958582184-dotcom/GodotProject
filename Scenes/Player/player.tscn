@@ -250,6 +250,7 @@ radius = 8.0
 size = Vector2(6, 16.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=1081890233]
+collision_layer = 2
 script = ExtResource("1_htcer")
 max_health = 20.0
 max_mana = 30.0
