@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 EventBus="*uid://bnxs3w8uuu8v7"
 Inventory="*uid://bwvwbjndopmd0"
+Refs="*uid://d0yqryimac1ve"
 
 [debug]
 

@@ -324,3 +324,6 @@ script = ExtResource("7_0u5uq")
 
 [node name="Attack" type="Node" parent="FSM" unique_id=713367901]
 script = ExtResource("8_jlvik")
+
+[connection signal="on_dead" from="HealthComponent" to="." method="_on_health_component_on_dead"]
+[connection signal="on_health_changed" from="HealthComponent" to="." method="_on_health_component_on_health_changed"]

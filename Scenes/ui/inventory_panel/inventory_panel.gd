@@ -9,7 +9,7 @@ var slots: Array[InventorySlot]
 var selected_slot_index: int = -1
 
 func _ready() -> void:
-	Inventory.on_inventor_changed.connect(_on_inventor_changed)
+	Inventory.on_inventory_changed.connect(_on_inventory_changed)
 	for i in container.get_child_count():
 		var slot: InventorySlot = container.get_child(i)
 		slot.on_slot_clicked.connect(_on_slot_clicked)
@@ -53,11 +53,20 @@ func handle_left_button(slot_index: int)-> void:
 				select_slot(slot_index)
 	pass
 func handle_right_button(slot_index: int)-> void:
+	print("aaaaa, " ,slot_index)
+	var item = Inventory.get_slot_item(slot_index)
+	print("bbbbb, " ,slot_index)
+	if not item: 
+		return
+	elif Inventory.can_use_item(slot_index):
+		print("cccc, " ,slot_index)
+		Inventory.use_item(slot_index)
+		EventBus.on_inventory_used_item.emit(item)
 	pass
 
 
 
-func _on_inventor_changed():
+func _on_inventory_changed():
 	for i in slots.size():
 		var slot: SlotData  = Inventory.get_slot(i)
 		slots[i].load_data(slot)

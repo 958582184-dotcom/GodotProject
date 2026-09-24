@@ -6,6 +6,8 @@
 [resource]
 script = ExtResource("1_34oh3")
 type = 2
+is_consumable = true
+value = 10.0
 icon = ExtResource("1_wee1s")
 name = "小型生命药剂"
 description = "喝吧喝吧~"

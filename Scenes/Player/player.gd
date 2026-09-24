@@ -45,7 +45,7 @@ func _ready() -> void:
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
-		add_exp(20)
+		health_component.take_demage(5)
 	
 
 func is_moving()-> bool:
@@ -104,3 +104,13 @@ func enable_weapon_collision(value : bool)->void:
 	enemy_area.monitoring = value
 
 	
+
+
+func _on_health_component_on_dead() -> void:
+	queue_free()
+	pass # Replace with function body.
+
+
+func _on_health_component_on_health_changed(current_health: float) -> void:
+	EventBus.on_player_health_updated.emit(current_health,max_health)
+	pass # Replace with function body.
